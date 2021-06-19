@@ -2,219 +2,215 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Document</title>
 </head>
 <header>
-    <div class="header_logo">
-        <h1>JustStreamIt</h1>
-    </div>
-    <div class="header_nav">
-        <a href="#">Home</a>
-        <a href="#">TV Shows</a>
-        <a href="#">Movies</a>
-        <a href="#">Latest</a>
-        <a href="#">My List</a>
-    </div>
+  <div class="header_logo">
+    <h1>JustStreamIt</h1>
+  </div>
+  <div class="header_nav">
+    <a href="#">Home</a>
+    <a href="#">TV Shows</a>
+    <a href="#">Movies</a>
+    <a href="#">Latest</a>
+    <a href="#">My List</a>
+  </div>
 </header>
 
 <body>
-    <div class="main_body">
-        <div class="div_meilleur_fim">
-            <h1>Meilleur Film</h1>
-            <div id="best_movie">
-                <img src="" alt="" id="best_movie_image">
-                <div class="best_movie_info">
-                    <h5 id="best_movie_title">Titre : </h5>
-                    <h5 id="best_movie_rank">Note Imdb : </h5>
-                    <h5 id="best_movie_resume">Résumé : </h5>
-                    <div class="play_button">
-                        <img src="assets/play.png" id="play_button" alt="">
-                        <h3>Play</h3>
-                    </div>
-                </div>
-            </div>
+  <div class="main_body js-document">
+    <div class="div_meilleur_fim">
+      <h1 id="best_movie_header">Meilleur Film</h1>
+      <div id="best_movie">
+        <img src="" alt="" id="best_movie_image">
+        <div class="best_movie_info">
+          <h5 id="best_movie_title">Titre : </h5>
+          <h5 id="best_movie_rank">Note Imdb : </h5>
+          <h5 id="best_movie_resume">Résumé : </h5>
+          <div class="play_button">
+            <img src="assets/play.png" id="play_button" alt="">
+            <h3>Play</h3>
+          </div>
         </div>
-        <div class="div_best_movies_carousel">
-            <main>
-                <h1>Films les mieux notés</h1>
-                <span class="arrows">&#139;</span>
-                <span class="arrows">&#155;</span>
-                <section>
-                    <div class="carousel_div">01</div>
-                    <div class="carousel_div">02</div>
-                    <div class="carousel_div">03</div>
-                    <div class="carousel_div">04</div>
-                    <div class="carousel_div">05</div>
-                    <div class="carousel_div">06</div>
-                    <div class="carousel_div">07</div>
-                    <div class="carousel_div">08</div>
-                    <div class="carousel_div">09</div>
-                    <div class="carousel_div">10</div>
-                    <div class="carousel_div">11</div>
-                    <div class="carousel_div">12</div>
-                </section>
-            </main>
-        </div>
-        <div class="row_title_cards">
-            <div class="category_title">
-                <h2>Action</h2>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <!-- <div class="card">Film 1</div> -->
-                    <img src="" alt="" class="action_movie">
-                </div>
-                <div class="column">
-                    <!-- <div class="card">Film 2</div> -->
-                    <img src="" alt="" class="action_movie">
-                </div>
-                <div class="column">
-                    <!-- <div class="card">Film 3</div> -->
-                    <img src="" alt="" class="action_movie">
-                </div>
-                <div class="column">
-                    <!-- <div class="card">Film 4</div> -->
-                    <img src="" alt="" class="action_movie">
-
-                </div>
-                <div class="column">
-                    <!-- <div class="card">Film 4</div> -->
-                    <img src="" alt="" class="action_movie">
-
-                </div>
-                <div class="column">
-                    <!-- <div class="card">Film 4</div> -->
-                    <img src="" alt="" class="action_movie">
-
-                </div>
-                <div class="column">
-                    <!-- <div class="card">Film 4</div> -->
-                    <img src="" alt="" class="action_movie">
-
-                </div>
-            </div>
-        </div>
-        <div class="row_title_cards">
-            <div class="category_title">
-                <h2>Sci-fi</h2>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <div class="card">Film 1</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 2</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 3</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-            </div>
-        </div>
-        <div class="row_title_cards">
-            <div class="category_title">
-                <h2>Aventure</h2>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <div class="card">Film 1</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 2</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 3</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-            </div>
-        </div>
-        <div class="row_title_cards">
-            <div class="category_title">
-                <h2>Thriller</h2>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <div class="card">Film 1</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 2</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 3</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-                <div class="column">
-                    <div class="card">Film 4</div>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="div_best_movies_carousel">
+      <!-- <input type="image"  src="./assets/image1.jpg" class="best_movie"aria-haspopup="dialog" aria-controls="dialog"/> -->
+      <main>
+        <h1>Films les mieux notés</h1>
+        <span class="arrows">&#139;</span>
+        <span class="arrows">&#155;</span>
+        <section>
+          <div class="carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="best_movie " id="b_movie_0" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="best_movie " id="b_movie_1" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="best_movie" id="b_movie_2" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="best_movie" id="b_movie_3" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="best_movie" id="b_movie_4" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="best_movie" id="b_movie_5" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="best_movie" id="b_movie_6" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="div_best_action_movies_carousel">
+      <main>
+        <h1>Les films d'actions les mieux notés</h1>
+        <span class="action_arrows">&#139;</span>
+        <span class="action_arrows">&#155;</span>
+        <section>
+          <div class="action_carousel_div">
+            <input type="image" src="./assets/image1.jpg" id="a_movie_0" class="action_movie" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="action_carousel_div">
+            <input type="image" src="./assets/image1.jpg" id="a_movie_1" class="action_movie" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="action_carousel_div">
+            <input type="image" src="./assets/image1.jpg" id="a_movie_2" class="action_movie" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="action_carousel_div">
+            <input type="image" src="./assets/image1.jpg" id="a_movie_3" class="action_movie" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="action_carousel_div">
+            <input type="image" src="./assets/image1.jpg" id="a_movie_4" class="action_movie" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="action_carousel_div">
+            <input type="image" src="./assets/image1.jpg" id="a_movie_5" class="action_movie" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="action_carousel_div">
+            <input type="image" src="./assets/image1.jpg" id="a_movie_6" class="action_movie" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="div_best_scifi_movies_carousel">
+      <main>
+        <h1>Les films de Sci-fi les mieux notés</h1>
+        <span class="scifi_arrows">&#139;</span>
+        <span class="scifi_arrows">&#155;</span>
+        <section>
+          <div class="scifi_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="scifi_movie" id="scifi_movie_0" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="scifi_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="scifi_movie" id="scifi_movie_1" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="scifi_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="scifi_movie" id="scifi_movie_2" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="scifi_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="scifi_movie" id="scifi_movie_3" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="scifi_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="scifi_movie" id="scifi_movie_4" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="scifi_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="scifi_movie" id="scifi_movie_5" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="scifi_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="scifi_movie" id="scifi_movie_6" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+
+        </section>
+      </main>
+    </div>
+    <div class="div_best_horror_movies_carousel">
+      <main>
+        <h1>Les films d'horreur les mieux notés</h1>
+        <span class="horror_arrows">&#139;</span>
+        <span class="horror_arrows">&#155;</span>
+        <section>
+          <div class="horror_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="horror_movie" id="horror_movie_0" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="horror_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="horror_movie" id="horror_movie_1" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="horror_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="horror_movie" id="horror_movie_2" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="horror_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="horror_movie" id="horror_movie_3" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="horror_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="horror_movie" id="horror_movie_4" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="horror_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="horror_movie" id="horror_movie_5" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+          <div class="horror_carousel_div">
+            <input type="image" src="./assets/image1.jpg" class="horror_movie" id="horror_movie_6" aria-haspopup="dialog"
+              aria-controls="dialog" />
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="" class="modal_movie_img" alt="">
+      <p id="modal_title">Some text in the Modal..</p>
+      <p id="modal_genre">Some text in the Modal..</p>
+      <p id="modal_release_date">Some text in the Modal..</p>
+      <p id="modal_rated">Some text in the Modal..</p>
+      <p id="modal_imdb_score">Some text in the Modal..</p>
+      <p id="modal_realisator">Some text in the Modal..</p>
+      <p id="modal_actors">Some text in the Modal..</p>
+      <p id="modal_lenght">Some text in the Modal..</p>
+      <p id="modal_origine_country">Some text in the Modal..</p>
+      <p id="modal_box_office">Some text in the Modal..</p>
+      <p id="modal_resume">Some text in the Modal..</p>
+
+    </div>
+
+  </div>
 </body>
 
 </html>
-<script>
-var span = document.getElementsByClassName('arrows')
-console.log("🚀 ~ span[1]", span)
-console.log("🚀 ~ span[1]", span[1])
-var div = document.getElementsByClassName('carousel_div')
-
-var l = 0;
-span[1].onclick = ()=> {
-  console.log("jzizizdid")
-    l++;
-    for(var i of div){
-        if(l==0) {i.style.left = "0px";}
-        if(l==1) {i.style.left = "-740px";}
-        if(l==2) {i.style.left = "-1480px";}
-        if(l==3) {i.style.left = "-2220px";}
-        if(l==4) {i.style.left = "-2960px";}
-        if (l>4) {l=4}
-    }
-}
-span[0].onclick = ()=> {
-    l--;
-    for(var i of div){
-        if(l==0) {i.style.left = "0px";}
-        if(l==1) {i.style.left = "-740px";}
-        if(l==2) {i.style.left = "-1480px";}
-        if(l==3) {i.style.left = "-2220px";}
-        if(l==4) {i.style.left = "-2960px";}
-        if (l<0) {l=0}
-    }
-}
-</script>
+<script type="text/javascript" src="script.js"></script>

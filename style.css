@@ -66,11 +66,34 @@ a {
     width: 46vw;
     justify-content: space-between;
   }
+  
+  #best_movie_title {
+    margin-bottom: 11px;
+    font-size: 22px;
+  }
+
+  #best_movie_header {
+    font-size: 49px;
+    margin-bottom: 22px;
+  }
+  #best_movie_resume {
+    margin-top: 18px;
+  }
+  #best_movie_rank {
+    margin-top: 15px;
+  }
+.best_movie_info {
+  margin-top: 24px;
+}
   #play_button {
     width: 47px;
   }
   .play_button {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 94px;
+    margin-top: 21px;
 
   }
   .info_and_button{
@@ -96,9 +119,9 @@ main {
   font-weight: bold;
   color: white;
 } */
-span {
+.arrows {
   position: absolute;
-  top: 79%;
+  top: 617px;
   font-size: 60px;
   font-weight: bold;
   color: purple;
@@ -106,15 +129,57 @@ span {
   left: .5%;
   z-index: 1;
 }
-span:nth-of-type(2){
-  left: 98.8%;
+.arrows:nth-of-type(2){
+  left: 77.8%;
+  text-align: right;
+}
+.action_arrows {
+  position: absolute;
+  top: 980px;
+  font-size: 60px;
+  font-weight: bold;
+  color: purple;
+  cursor: pointer;
+  left: .5%;
+  z-index: 1;
+}
+.action_arrows:nth-of-type(2){
+  left: 77.8%;
+  text-align: right;
+}
+.scifi_arrows {
+  position: absolute;
+  top: 1330px;
+  font-size: 60px;
+  font-weight: bold;
+  color: purple;
+  cursor: pointer;
+  left: .5%;
+  z-index: 1;
+}
+.scifi_arrows:nth-of-type(2){
+  left: 77.8%;
+  text-align: right;
+}
+.horror_arrows {
+  position: absolute;
+  top: 1699px;
+  font-size: 60px;
+  font-weight: bold;
+  color: purple;
+  cursor: pointer;
+  left: .5%;
+  z-index: 1;
+}
+.horror_arrows:nth-of-type(2){
+  left: 77.8%;
   text-align: right;
 }
 section{
-  width: 98%;
+  width: 76%;
   height: 300px;
   background: black;
-  margin: 10px auto;
+  /* margin: 10px auto; */
   display: flex;
   justify-content: left;
   overflow-x: auto;
@@ -128,11 +193,84 @@ section::-webkit-scrollbar{
   position: relative;
   left: 0;
   text-align: center;
-  padding-top: 60px;
   font-size: 100px;
   font-weight: bold;
   margin: 10px 20px;
   color: white;
-  background: purple;
   transition: 0.5s;
+}
+.action_carousel_div {
+  min-width: 330px;
+  height: 200px;
+  position: relative;
+  left: 0;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  margin: 10px 20px;
+  color: white;
+  transition: 0.5s;
+}
+.scifi_carousel_div {
+  min-width: 330px;
+  height: 200px;
+  position: relative;
+  left: 0;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  margin: 10px 20px;
+  color: white;
+  transition: 0.5s;
+}
+.horror_carousel_div {
+  min-width: 330px;
+  height: 200px;
+  position: relative;
+  left: 0;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  margin: 10px 20px;
+  color: white;
+  transition: 0.5s;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 23rem;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  color: #000;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 18%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
