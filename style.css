@@ -85,17 +85,38 @@ a {
 .best_movie_info {
   margin-top: 24px;
 }
-  #play_button {
-    width: 47px;
+  .img_play_button {
+    width: 27px;
   }
   .play_button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 94px;
+    width: 100px;
     margin-top: 21px;
-
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px 16px 5px 13px;
   }
+
+  .info_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    margin-top: 21px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px 19px 5px 13px;
+  }
+  .play_info_div {
+    display: flex;
+    width: 212px;
+    justify-content: space-between;
+    }
+
   .info_and_button{
     display: flex;
     flex-direction: column;
@@ -175,7 +196,7 @@ main {
   left: 77.8%;
   text-align: right;
 }
-section{
+.carousel_styling {
   width: 76%;
   height: 300px;
   background: black;
@@ -184,7 +205,7 @@ section{
   justify-content: left;
   overflow-x: auto;
 }
-section::-webkit-scrollbar{
+.carousel_styling::-webkit-scrollbar{
   visibility: hidden;
 }
 .carousel_div{
@@ -253,19 +274,27 @@ section::-webkit-scrollbar{
 
 /* Modal Content */
 .modal-content {
+  display: flex;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 18%;
-}
+  border-radius: 10px;
+  width: 33%;
+  align-items: flex-start;
 
+}
+.modal_text_info {
+  margin-left: 25px;
+  padding-top: 13px;
+}
 /* The Close Button */
 .close {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  margin-right: 11px;
 }
 
 .close:hover,
