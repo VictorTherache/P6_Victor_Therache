@@ -1,9 +1,8 @@
 function get_best_movies_info() {
-    var request = new XMLHttpRequest()
-    var image_url_array = []
-    var info_array = []
-    var global_url = ""
-    var btn = document.getElementsByClassName("best_movie");
+    let image_url_array = []
+    let info_array = []
+    let global_url = ""
+    let btn = document.getElementsByClassName("best_movie");
     for (let i = 1; i < 3; i++) {
         fetch(`http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&page=${i}`)
             .then(response => response.json())
@@ -26,9 +25,9 @@ function get_best_movies_info() {
                             })
                             for (let item of btn) {
                                 item.onclick = function () {
-                                    var movie_index = item.id.slice(-1)
-                                    var modal = document.getElementById("myModal");
-                                    var converted_time = convertMinsToHrsMins(info_array[movie_index].duration)
+                                    let movie_index = item.id.slice(-1)
+                                    let modal = document.getElementById("myModal");
+                                    let converted_time = convertMinsToHrsMins(info_array[movie_index].duration)
                                     modal.style.display = "block";
                                     document.getElementById("modal_movie_img").src = info_array[movie_index].image_url
                                     document.getElementById("modal_title").innerHTML = `<strong>Title :</strong> ${info_array[movie_index].title}`
@@ -40,7 +39,7 @@ function get_best_movies_info() {
                                     document.getElementById("modal_actors").innerHTML = `<strong>Actors :</strong> ${info_array[movie_index].actors[0]}`
                                     document.getElementById("modal_lenght").innerHTML = `<strong>Lenght :</strong> ${converted_time}`                                    
                                     document.getElementById("modal_origine_country").innerHTML = `<strong>Origine Country :</strong> ${info_array[movie_index].languages}`
-                                    document.getElementById("modal_box_office").innerHTML = `<strong>Box Office :</strong> ${info_array[movie_index].usa_gross_income}`
+                                    document.getElementById("modal_box_office").innerHTML = `<strong>Box Office :</strong> ${info_array[movie_index].usa_gross_income} $`
                                     document.getElementById("modal_resume").innerHTML = `<strong>Resume :</strong> ${info_array[movie_index].description}`
                                 }
                             }
@@ -53,17 +52,17 @@ function get_best_movies_info() {
 }
 
 function get_btn_index() {
-    var btn = document.getElementsByClassName("best_movie");
+    let btn = document.getElementsByClassName("best_movie");
     for (let item of btn) {
         item.onclick = function () {
-            var movie_index = item.id.slice(-1)
+            let movie_index = item.id.slice(-1)
             return movie_index
         }
     }
 }
 
 function get_best_movie_info() {
-    var info_array = []
+    let info_array = []
     for (let i = 1; i < 3; i++) {
         fetch(`http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&page=${i}`)
             .then(response => response.json())
@@ -83,35 +82,9 @@ function get_best_movie_info() {
 }
 
 function action_movies() {
-    var request = new XMLHttpRequest()
-    var image_url_array = []
-    for (let i = 1; i < 3; i++) {
-        fetch(`http://localhost:8000/api/v1/titles/?genre=action&sort_by=-imdb_score&page=${i}`)
-            .then(response => response.json())
-            .then(data => {
-                data.results.forEach((item, index) => {
-                    image_url_array.push(item.image_url)
-                })
-                let best_movies = document.getElementsByClassName('action_movie')
-                const index = image_url_array.indexOf(null)
-                if (index > -1) {
-                    image_url_array.splice(index, 1)
-                }
-                Object.entries(best_movies).forEach(([key, value]) => {
-                    if (image_url_array[key] != null) {
-                        value.src = image_url_array[key]
-                    }
-                })
-            })
-            .catch(error => console.error(error))
-    }
-}
-
-function action_movies() {
-    var request = new XMLHttpRequest()
-    var image_url_array = []
-    var info_array = []
-    var btn = document.getElementsByClassName("action_movie");
+    let image_url_array = []
+    let info_array = []
+    let btn = document.getElementsByClassName("action_movie");
     for (let i = 1; i < 3; i++) {
         fetch(`http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&genre=action&page=${i}`)
             .then(response => response.json())
@@ -134,10 +107,9 @@ function action_movies() {
                             })
                             for (let item of btn) {
                                 item.onclick = function () {
-                                    var movie_index = item.id.slice(-1)
-                                    // console.log("🚀 ~ data.results.forEach ~ info_array", info_array[movie_index])
-                                    var modal = document.getElementById("myModal");
-                                    var converted_time = convertMinsToHrsMins(info_array[movie_index].duration)
+                                    let movie_index = item.id.slice(-1)
+                                    let modal = document.getElementById("myModal");
+                                    let converted_time = convertMinsToHrsMins(info_array[movie_index].duration)
                                     modal.style.display = "block";
                                     document.getElementById("modal_movie_img").src = info_array[movie_index].image_url
                                     document.getElementById("modal_title").innerHTML = `<strong>Title :</strong> ${info_array[movie_index].title}`
@@ -149,7 +121,7 @@ function action_movies() {
                                     document.getElementById("modal_actors").innerHTML = `<strong>Actors :</strong> ${info_array[movie_index].actors[0]}`
                                     document.getElementById("modal_lenght").innerHTML = `<strong>Lenght :</strong> ${converted_time}`                                    
                                     document.getElementById("modal_origine_country").innerHTML = `<strong>Origine Country :</strong> ${info_array[movie_index].languages}`
-                                    document.getElementById("modal_box_office").innerHTML = `<strong>Box Office :</strong> ${info_array[movie_index].usa_gross_income}`
+                                    document.getElementById("modal_box_office").innerHTML = `<strong>Box Office :</strong> ${info_array[movie_index].usa_gross_income} $`
                                     document.getElementById("modal_resume").innerHTML = `<strong>Resume :</strong> ${info_array[movie_index].description}`
                                 }
                             }
@@ -162,10 +134,9 @@ function action_movies() {
 }
 
 function scifi_movies() {
-    var request = new XMLHttpRequest()
-    var image_url_array = []
-    var info_array = []
-    var btn = document.getElementsByClassName("scifi_movie");
+    let image_url_array = []
+    let info_array = []
+    let btn = document.getElementsByClassName("scifi_movie");
     for (let i = 1; i < 3; i++) {
         fetch(`http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&genre=sci-fi&page=${i}`)
             .then(response => response.json())
@@ -188,9 +159,9 @@ function scifi_movies() {
                             })
                             for (let item of btn) {
                                 item.onclick = function () {
-                                    var movie_index = item.id.slice(-1)
-                                    var modal = document.getElementById("myModal");
-                                    var converted_time = convertMinsToHrsMins(info_array[movie_index].duration)
+                                    let movie_index = item.id.slice(-1)
+                                    let modal = document.getElementById("myModal");
+                                    let converted_time = convertMinsToHrsMins(info_array[movie_index].duration)
                                     modal.style.display = "block";
                                     document.getElementById("modal_movie_img").src = info_array[movie_index].image_url
                                     document.getElementById("modal_title").innerHTML = `<strong>Title :</strong> ${info_array[movie_index].title}`
@@ -202,7 +173,7 @@ function scifi_movies() {
                                     document.getElementById("modal_actors").innerHTML = `<strong>Actors :</strong> ${info_array[movie_index].actors[0]}`
                                     document.getElementById("modal_lenght").innerHTML = `<strong>Lenght :</strong> ${converted_time}`                                    
                                     document.getElementById("modal_origine_country").innerHTML = `<strong>Origine Country :</strong> ${info_array[movie_index].languages}`
-                                    document.getElementById("modal_box_office").innerHTML = `<strong>Box Office :</strong> ${info_array[movie_index].usa_gross_income}`
+                                    document.getElementById("modal_box_office").innerHTML = `<strong>Box Office :</strong> ${info_array[movie_index].usa_gross_income} $`
                                     document.getElementById("modal_resume").innerHTML = `<strong>Resume :</strong> ${info_array[movie_index].description}`
                                 }
                             }
@@ -215,10 +186,9 @@ function scifi_movies() {
 }
 
 function horror_movies() {
-    var request = new XMLHttpRequest()
-    var image_url_array = []
-    var info_array = []
-    var btn = document.getElementsByClassName("horror_movie");
+    let image_url_array = []
+    let info_array = []
+    let btn = document.getElementsByClassName("horror_movie");
     for (let i = 1; i < 3; i++) {
         fetch(`http://localhost:8000/api/v1/titles/?sort_by=-imdb_score&genre=horror&page=${i}`)
             .then(response => response.json())
@@ -241,9 +211,9 @@ function horror_movies() {
                             })
                             for (let item of btn) {
                                 item.onclick = function () {
-                                    var movie_index = item.id.slice(-1)
-                                    var modal = document.getElementById("myModal");
-                                    var converted_time = convertMinsToHrsMins(info_array[movie_index].duration)
+                                    let movie_index = item.id.slice(-1)
+                                    let modal = document.getElementById("myModal");
+                                    let converted_time = convertMinsToHrsMins(info_array[movie_index].duration)
                                     modal.style.display = "block";
                                     document.getElementById("modal_movie_img").src = info_array[movie_index].image_url
                                     document.getElementById("modal_title").innerHTML = `<strong>Title :</strong> ${info_array[movie_index].title}`
@@ -255,7 +225,7 @@ function horror_movies() {
                                     document.getElementById("modal_actors").innerHTML = `<strong>Actors :</strong> ${info_array[movie_index].actors[0]}`
                                     document.getElementById("modal_lenght").innerHTML = `<strong>Lenght :</strong> ${converted_time}`
                                     document.getElementById("modal_origine_country").innerHTML = `<strong>Origine Country :</strong> ${info_array[movie_index].languages}`
-                                    document.getElementById("modal_box_office").innerHTML = `<strong>Box Office :</strong> ${info_array[movie_index].usa_gross_income}`
+                                    document.getElementById("modal_box_office").innerHTML = `<strong>Box Office :</strong> ${info_array[movie_index].usa_gross_income} $`
                                     document.getElementById("modal_resume").innerHTML = `<strong>Resume :</strong> ${info_array[movie_index].description}`
                                 }
                             }
@@ -268,7 +238,7 @@ function horror_movies() {
 }
 
 function best_movie() {
-    var info_button = document.getElementsByClassName('info_button')
+    let info_button = document.getElementsByClassName('info_button')
     fetch('http://localhost:8000/api/v1/titles/?sort_by=-imdb_score')
         .then(response => response.json())
         .then(data => {
@@ -287,11 +257,10 @@ function best_movie() {
                     best_movie_resume.innerHTML = "Resumé : " + data.long_description
                     for (let item of info_button) {
                         item.onclick = function () {
-                            var modal = document.getElementById("myModal");
-                            var converted_time = convertMinsToHrsMins(data.duration)
+                            let modal = document.getElementById("myModal");
+                            let converted_time = convertMinsToHrsMins(data.duration)
                             modal.style.display = "block";
                             document.getElementById("modal_movie_img").src = data.image_url
-                            console.log("🚀 ~ best_movie ~ data", data)
                             document.getElementById("modal_title").innerHTML = `<strong>Titre :</strong> ${data.title}`
                             document.getElementById("modal_genre").innerHTML = `<strong>Genre :</strong> ${data.genres}`
                             document.getElementById("modal_release_date").innerHTML = `<strong>Date de sortie :</strong> ${data.date_published}`
@@ -301,7 +270,7 @@ function best_movie() {
                             document.getElementById("modal_actors").innerHTML = `<strong>Acteurs :</strong> ${data.actors.join(', ')}`
                             document.getElementById("modal_lenght").innerHTML = `<strong>Durée :</strong> ${converted_time}`
                             document.getElementById("modal_origine_country").innerHTML = `<strong>Pays d'origine :</strong> ${data.languages}`
-                            document.getElementById("modal_box_office").innerHTML = `<strong>Box Office :</strong> ${data.usa_gross_income}`
+                            document.getElementById("modal_box_office").innerHTML = `<strong>Box Office :</strong> ${data.usa_gross_income} $`
                             document.getElementById("modal_resume").innerHTML = `<strong>Resumé :</strong> ${data.description}`
                         }
                     }
@@ -319,13 +288,13 @@ const convertMinsToHrsMins = (mins) => {
   }
 
 function best_movie_carousel() {
-    var span = document.getElementsByClassName('arrows')
-    var div = document.getElementsByClassName('carousel_div')
+    let span = document.getElementsByClassName('arrows')
+    let div = document.getElementsByClassName('carousel_div')
 
-    var l = 0;
+    let l = 0;
     span[1].onclick = () => {
         l++;
-        for (var i of div) {
+        for (let i of div) {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
@@ -334,7 +303,7 @@ function best_movie_carousel() {
     }
     span[0].onclick = () => {
         l--;
-        for (var i of div) {
+        for (let i of div) {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
@@ -345,13 +314,13 @@ function best_movie_carousel() {
     }
 }
 function action_movie_carousel() {
-    var span = document.getElementsByClassName('action_arrows')
-    var div = document.getElementsByClassName('action_carousel_div')
+    let span = document.getElementsByClassName('action_arrows')
+    let div = document.getElementsByClassName('action_carousel_div')
 
-    var l = 0;
+    let l = 0;
     span[1].onclick = () => {
         l++;
-        for (var i of div) {
+        for (let i of div) {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
@@ -360,7 +329,7 @@ function action_movie_carousel() {
     }
     span[0].onclick = () => {
         l--;
-        for (var i of div) {
+        for (let i of div) {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
@@ -369,13 +338,13 @@ function action_movie_carousel() {
     }
 }
 function scifi_movie_carousel() {
-    var span = document.getElementsByClassName('scifi_arrows')
-    var div = document.getElementsByClassName('scifi_carousel_div')
+    let span = document.getElementsByClassName('scifi_arrows')
+    let div = document.getElementsByClassName('scifi_carousel_div')
 
-    var l = 0;
+    let l = 0;
     span[1].onclick = () => {
         l++;
-        for (var i of div) {
+        for (let i of div) {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
@@ -384,7 +353,7 @@ function scifi_movie_carousel() {
     }
     span[0].onclick = () => {
         l--;
-        for (var i of div) {
+        for (let i of div) {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
@@ -394,13 +363,13 @@ function scifi_movie_carousel() {
 }
 
 function horror_movie_carousel() {
-    var span = document.getElementsByClassName('horror_arrows')
-    var div = document.getElementsByClassName('horror_carousel_div')
+    let span = document.getElementsByClassName('horror_arrows')
+    let div = document.getElementsByClassName('horror_carousel_div')
 
-    var l = 0;
+    let l = 0;
     span[1].onclick = () => {
         l++;
-        for (var i of div) {
+        for (let i of div) {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
@@ -409,7 +378,7 @@ function horror_movie_carousel() {
     }
     span[0].onclick = () => {
         l--;
-        for (var i of div) {
+        for (let i of div) {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
@@ -420,9 +389,9 @@ function horror_movie_carousel() {
 }
 
 function modal_window(info_array) {
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementsByClassName("best_movie");
-    var span = document.getElementsByClassName("close")[0];
+    let modal = document.getElementById("myModal");
+    let btn = document.getElementsByClassName("best_movie");
+    let span = document.getElementsByClassName("close")[0];
     span.onclick = function () {
         modal.style.display = "none";
     }
