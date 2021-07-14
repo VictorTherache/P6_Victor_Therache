@@ -1,5 +1,3 @@
-
-
 function get_best_movies_info() {
     var request = new XMLHttpRequest()
     var image_url_array = []
@@ -64,11 +62,6 @@ function get_btn_index() {
     }
 }
 
-function get_best_movies_image_url(info_array) {
-}
-
-// get_best_movies_image_url(info_array)
-
 function get_best_movie_info() {
     var info_array = []
     for (let i = 1; i < 3; i++) {
@@ -88,7 +81,6 @@ function get_best_movie_info() {
         return info_array
     }
 }
-
 
 function action_movies() {
     var request = new XMLHttpRequest()
@@ -114,7 +106,6 @@ function action_movies() {
             .catch(error => console.error(error))
     }
 }
-
 
 function action_movies() {
     var request = new XMLHttpRequest()
@@ -169,6 +160,7 @@ function action_movies() {
     }
     return info_array
 }
+
 function scifi_movies() {
     var request = new XMLHttpRequest()
     var image_url_array = []
@@ -277,7 +269,6 @@ function horror_movies() {
 
 function best_movie() {
     var info_button = document.getElementsByClassName('info_button')
-    // var info_array = []
     fetch('http://localhost:8000/api/v1/titles/?sort_by=-imdb_score')
         .then(response => response.json())
         .then(data => {
@@ -296,7 +287,6 @@ function best_movie() {
                     best_movie_resume.innerHTML = "Resumé : " + data.long_description
                     for (let item of info_button) {
                         item.onclick = function () {
-                            // var movie_index = item.id.slice(-1)
                             var modal = document.getElementById("myModal");
                             var converted_time = convertMinsToHrsMins(data.duration)
                             modal.style.display = "block";
@@ -339,8 +329,6 @@ function best_movie_carousel() {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
-            // if(l==3) {i.style.left = "-2220px";}
-            // if(l==4) {i.style.left = "-2960px";}
             if (l > 4) { l = 4 }
         }
     }
@@ -367,8 +355,6 @@ function action_movie_carousel() {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
-            // if(l==3) {i.style.left = "-2220px";}
-            // if(l==4) {i.style.left = "-2960px";}
             if (l > 4) { l = 4 }
         }
     }
@@ -378,8 +364,6 @@ function action_movie_carousel() {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
-            // if(l==3) {i.style.left = "-2220px";}
-            // if(l==4) {i.style.left = "-2960px";}
             if (l < 0) { l = 0 }
         }
     }
@@ -395,8 +379,6 @@ function scifi_movie_carousel() {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
-            // if(l==3) {i.style.left = "-2220px";}
-            // if(l==4) {i.style.left = "-2960px";}
             if (l > 4) { l = 4 }
         }
     }
@@ -406,8 +388,6 @@ function scifi_movie_carousel() {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
-            // if(l==3) {i.style.left = "-2220px";}
-            // if(l==4) {i.style.left = "-2960px";}
             if (l < 0) { l = 0 }
         }
     }
@@ -424,8 +404,6 @@ function horror_movie_carousel() {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
-            // if(l==3) {i.style.left = "-2220px";}
-            // if(l==4) {i.style.left = "-2960px";}
             if (l > 4) { l = 4 }
         }
     }
@@ -435,36 +413,19 @@ function horror_movie_carousel() {
             if (l == 0) { i.style.left = "0px"; }
             if (l == 1) { i.style.left = "-740px"; }
             if (l == 2) { i.style.left = "-1480px"; }
-            // if(l==3) {i.style.left = "-2220px";}
-            // if(l==4) {i.style.left = "-2960px";}
+
             if (l < 0) { l = 0 }
         }
     }
 }
 
-// Get the modal
 function modal_window(info_array) {
     var modal = document.getElementById("myModal");
-    // modal.style.display = "block";
-    // Get the button that opens the modal
     var btn = document.getElementsByClassName("best_movie");
-    // for (let item of btn){
-    //     item.onclick = function() {
-    //         var movie_index = item.id.slice(-1)
-    //       }
-    // }
-
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
     }
-
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
@@ -475,7 +436,6 @@ function modal_window(info_array) {
 best_movie()
 modal_window()
 get_best_movies_info()
-// best_movies()
 action_movies()
 scifi_movies()
 horror_movies()
@@ -483,4 +443,3 @@ best_movie_carousel()
 action_movie_carousel()
 scifi_movie_carousel()
 horror_movie_carousel()
-// get_btn_index()
