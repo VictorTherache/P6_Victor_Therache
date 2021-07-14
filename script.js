@@ -293,7 +293,7 @@ function best_movie() {
                 .then(response => response.json())
                 .then(data => {
                     let best_movie_resume = document.getElementById('best_movie_resume')
-                    best_movie_resume.innerHTML = "Resume : " + data.long_description
+                    best_movie_resume.innerHTML = "Resumé : " + data.long_description
                     for (let item of info_button) {
                         item.onclick = function () {
                             // var movie_index = item.id.slice(-1)
@@ -302,17 +302,17 @@ function best_movie() {
                             modal.style.display = "block";
                             document.getElementById("modal_movie_img").src = data.image_url
                             console.log("🚀 ~ best_movie ~ data", data)
-                            document.getElementById("modal_title").innerHTML = `<strong>Title :</strong> ${data.title}`
+                            document.getElementById("modal_title").innerHTML = `<strong>Titre :</strong> ${data.title}`
                             document.getElementById("modal_genre").innerHTML = `<strong>Genre :</strong> ${data.genres}`
-                            document.getElementById("modal_release_date").innerHTML = `<strong>Release date :</strong> ${data.date_published}`
-                            document.getElementById("modal_rated").innerHTML = `<strong>Rated :</strong> ${data.rated}`
-                            document.getElementById("modal_imdb_score").innerHTML = `<strong>Imdb Score :</strong> ${data.imdb_score}`
-                            document.getElementById("modal_realisator").innerHTML = `<strong>Director :</strong> ${data.directors.join(', ')}`
-                            document.getElementById("modal_actors").innerHTML = `<strong>Actors :</strong> ${data.actors.join(', ')}`
-                            document.getElementById("modal_lenght").innerHTML = `<strong>Lenght :</strong> ${converted_time}`
-                            document.getElementById("modal_origine_country").innerHTML = `<strong>Origine Country :</strong> ${data.languages}`
+                            document.getElementById("modal_release_date").innerHTML = `<strong>Date de sortie :</strong> ${data.date_published}`
+                            document.getElementById("modal_rated").innerHTML = `<strong>Score :</strong> ${data.rated}`
+                            document.getElementById("modal_imdb_score").innerHTML = `<strong>Score Imdb :</strong> ${data.imdb_score}`
+                            document.getElementById("modal_realisator").innerHTML = `<strong>Directeur :</strong> ${data.directors.join(', ')}`
+                            document.getElementById("modal_actors").innerHTML = `<strong>Acteurs :</strong> ${data.actors.join(', ')}`
+                            document.getElementById("modal_lenght").innerHTML = `<strong>Durée :</strong> ${converted_time}`
+                            document.getElementById("modal_origine_country").innerHTML = `<strong>Pays d'origine :</strong> ${data.languages}`
                             document.getElementById("modal_box_office").innerHTML = `<strong>Box Office :</strong> ${data.usa_gross_income}`
-                            document.getElementById("modal_resume").innerHTML = `<strong>Resume :</strong> ${data.description}`
+                            document.getElementById("modal_resume").innerHTML = `<strong>Resumé :</strong> ${data.description}`
                         }
                     }
                 })
